@@ -823,3 +823,13 @@ header {
     margin-top: 18px;
     font-weight: 600;
 }
+
+/* User profile dropdown custom background */
+.dropdown-menu[aria-labelledby="userDropdown"] {
+    background-color: #fee3c3;
+}
+
+/* Optional: style dropdown items for better contrast */
+.dropdown-menu[aria-labelledby="userDropdown"] .dropdown-item {
+    color: #333;
+}
