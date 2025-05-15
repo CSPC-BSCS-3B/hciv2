@@ -1,0 +1,420 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles - Now with Bootstrap integration */
+body, input, button, select, textarea {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'Liberation Sans', sans-serif !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fcf8f5;
+    color: #202122;
+    margin-bottom: 10px
+}
+
+a {
+    text-decoration: none;
+    color: #3366cc;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #fcf8f5;
+}
+
+.logo-container img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+    width: 190px;
+    margin-left: -20px;
+}
+
+.nav-links {
+    display: block;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px; /* Increased font size */
+    padding: 0 12px; /* Increased padding */
+    margin-right: 18px;
+}
+
+.nav-links a.donate-link {
+    margin-right: 32px;
+}
+
+.nav-links a:last-child {
+    margin-right: 0;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    color: #777;
+    margin: 0 12px; /* Increased spacing around the separator dot */
+    font-size: 8px; /* Smaller dot size as shown in the image */
+}
+
+.register-btn {
+    background-color: #b7bfcf; /* Updated background color */
+    color: white !important;
+    padding: 12px 45px; /* Larger button dimensions */
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    text-decoration: none !important;
+    font-size: 16px; /* Increased font size */
+    margin-left: 15px; /* Adjusted margin */
+    font-weight: 500; /* Added slightly bolder font */
+    height: 40px;
+    text-align: center; /* Center the text horizontally */
+    line-height: 16px; /* Adjust line height to center vertically */
+    display: inline-flex; /* Use flexbox for better alignment */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
+a.register-btn {
+    margin: 10px;
+    width: 100px;
+}
+
+.register-btn:hover {
+    background-color: #13307e /* Updated hover background color */
+}
+
+header a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    height: 150px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.wiki-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #6c5a54;
+}
+
+.wiki-title h1 {
+    font-size: 36px;
+    font-weight: normal;
+    margin: 0;
+    color: #54442b;
+}
+
+.wiki-title p {
+    font-size: 20px;
+    color: #666;
+    margin: 5px 0 0;
+    font-size: 40px;
+}
+
+.wiki-subtitle {
+    font-size: 14px;
+    color: #54442b;
+    margin-top: -20px;
+}
+
+/* Search Container Styles */
+.search-container {
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 700px;
+    margin-left: -29px;
+}
+
+.search-icon-container {
+    padding: 0 5px 0 15px;
+    color: #888;
+    margin-left: -5px;
+}
+
+.search-icon-container i {
+    font-size: 18px;
+}
+
+#search-input {
+    padding: 12px 15px 12px 5px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+    margin-left: 10px;
+    color: #5e4b45;
+    opacity: 0.5;
+}
+
+#search-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.search-btn {
+    padding: 5px 30px;
+    background-color: #84855d;
+    color: #fdf9f6;
+    border: none;
+    font-weight: normal;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.search-btn:hover {
+    background-color: #797963;
+}
+
+.search-divider {
+    width: 2.5px;
+    height: 37px;
+    background: #84855d;
+    margin: 0 1px 0 18px;
+    display: inline-block;
+    color: #84855d;
+    border-radius: 10px;
+}
+
+/* Popular Search Styles */
+.popular-search-section {
+    margin-top: 3rem;
+}
+
+.popular-search-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #5e4b45;
+}
+
+.search-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px;
+    font-size: 18px;
+}
+
+.search-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    padding: 0;
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.search-card h3 {
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 15px 5px;
+}
+
+.open-btn {
+    display: block;
+    margin: 15px;
+    padding: 8px 0;
+    background-color: #d1c7a8;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    width: calc(100% - 30px);
+    cursor: pointer;
+    font-weight: normal;
+    transition: background-color 0.2s;
+}
+
+.open-btn:hover {
+    background-color: #c5bb9c;
+}
+
+.status, .time {
+    margin: 5px 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.status {
+    font-weight: bold;
+}
+
+/* Error Message */
+#search-error {
+    border-radius: 5px;
+}
+
+/* Bootstrap overrides and extensions */
+.btn-primary {
+    background-color: #3366cc;
+    border-color: #3366cc;
+}
+
+.btn-primary:hover {
+    background-color: #254aa5;
+    border-color: #254aa5;
+}
+
+.btn-warning {
+    background-color: #ffcc33;
+    border-color: #ffcc33;
+    color: #000;
+}
+
+.btn-warning:hover {
+    background-color: #ffbb00;
+    border-color: #ffbb00;
+    color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .search-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .wiki-title h1 {
+        font-size: 28px;
+    }
+    
+    .wiki-title p {
+        font-size: 16px;
+    }
+}
+
+/* Search Cards */
+.search-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card-thumbnail {
+    width: 60px;
+    height: 60px;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+.search-card .name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-top: 5px;
+}
+
+.open-btn {
+    background-color: #f7ebd9;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    padding: 4px 25px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.open-btn:hover {
+    background-color: #e8dcc5;
+}
+
+.status {
+    font-weight: 500;
+    font-size: 13px;
+    color: #333;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.time {
+    font-size: 13px;
+    color: #777;
+    margin: 0;
+}
+
+/* Online Icon */
+.online-icon {
+    color: #84855d; /* Bright green color for the online indicator */
+    font-size: 9px; /* Small size for the icon */
+    margin: 0 12px; /* Same spacing as the previous separator */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+    gap: 55px;
+    margin-top: 46.5px;
+}

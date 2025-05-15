@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CWC - Wikipedia</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/article.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/wikipedia.png" alt="Wikipedia Logo" class="logo">
+            </a>
+        </div>
+        <div class="search-container">
+                <div class="search-box d-flex">
+                    <div class="search-icon-container d-flex align-items-center">
+                        <i class="bi bi-search ms-3"></i>
+                    </div>
+                    <div class="search-divider"></div>
+                    <input type="text" class="form-control border-0 shadow-none" id="search-input" placeholder="Type anything here">
+                    <button class="search-btn" id="search-button">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="nav-links">
+            <button class="go-pro-btn" type="button">Go Pro</button>
+            <a href="#" class="user-icon gray-user-icon" title="User Profile"><i class="bi bi-person-fill"></i></a>
+            <a href="#" class="user-icon" title="Palette"><i class="bi bi-palette-fill palette-icon"></i></a>
+        </div>
+    </header>
+
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Left sidebar -->
+            <div class="col-md-2">
+                <div class="sidebar">
+                    <h6 class="sidebar-heading">− Contents</h6>
+                    <ul class="sidebar-menu">
+                        <li><a href="#">Early Life </br> and </br>Education <span class="expand-icon">›</span></li></a>
+                        <li><a href="#">Career <span class="expand-icon">›</span></li></a>
+                        <li><a href="#">Personal Life <span class="expand-icon">›</span></li></a>
+                        <li><a href="#">Awards <span class="expand-icon">›</span></li></a>
+                        <li><a href="#">References <span class="expand-icon">›</span></li></a>
+                        <li><a href="#">Links <span class="expand-icon">›</span></li></a>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main content -->
+             <div class="col-md-7">
+                <div class="article-content0">
+                    <div class="article-header d-flex align-items-center">
+                        <i class="bi bi-file-text me-2"></i>
+                        <h1 id="article-title">Jane Cagorong</h1>
+                        <span class="pro-badge">PRO</span>
+                    </div>
+                    
+                    <div class="article-actions">
+                        <a href="jane.html" class="action-link"><i class="bi bi-eye me-1"></i> Read</a>
+                        <a href="#" class="action-link"><i class="bi bi-pencil me-1"></i> Edit</a>
+                        <a href="#" class="action-link active"><i class="bi bi-palette me-1"></i> Customize</a>
+                        <a href="#" class="action-link"><i class="bi bi-clock-history me-1"></i> History</a>
+                        <a href="#" class="action-link"><i class="bi bi-link-45deg me-1"></i> Related Pages</a>
+                    </div>
+                </div>
+
+                <div class="article-content">          
+                    <div class="notice-box">
+                        Only you can see this page
+                    </div>
+
+                    <div class="profile-section">
+                        <div class="jane-header-container">
+                            <h3 class="jane-header-title">Jane's Profile Page</h3>
+                        </div>
+                        <div class="profile-info">
+                            <div class="info-list">
+                                <div><strong>Username:</strong> Janey</div>
+                                <div><strong>Full Name:</strong> Jane Cagorong</div>
+                                <div><strong>Email:</strong> jacagorong@my.cspc.edu.ph</div>
+                                <div><strong>Pronouns:</strong> she/her</div>
+                                <div class="update-profile-container">
+                                    <button class="update-profile-btn">Update Profile</button>
+                                </div>
+                            </div>
+                            <div class="profile-image">
+                                <img src="images/jane3.png" alt="Jane Cagorong's profile picture">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="article-content1">
+                    <div class="about-header-container">
+                        <h3 class="about-header-title">About</h3>
+                    </div>
+                    <div class="about-content-container">
+                        <div class="bio-text">
+                            <h3>Bio</h3>
+                            <textarea placeholder="Write something about yourself..."></textarea>
+                        </div>
+                        <div class="details-section mt-4">
+                            <h3>Details about you</h3>
+                            <div class="details-text">
+                                <textarea placeholder="Add more details about yourself..."></textarea>
+                            </div>
+                        </div>
+                        <div class="life-events-section mt-4">
+                            <h3>Life events</h3>
+                            <div class="life-events-text">
+                                <textarea placeholder="Share your life events..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Right tools sidebar -->
+            <div class="col-md-3">
+                <div class="tools-sidebar">
+                    <h6 class="tools-heading">Tools</h6>
+                    <ul class="tools-menu list-unstyled">
+                        <li><a href="#"><i class="bi bi-globe me-2"></i>Languages</a></li>
+                        <li><a href="#"><i class="bi bi-map me-2"></i>Topic Map <span class="pro-tag">Pro</span></a></li>
+                        <li><a href="#"><i class="bi bi-journal-text me-2"></i>My Notes <span class="pro-tag">Pro</span></a></li>
+                        <li><a href="#"><i class="bi bi-question-circle me-2"></i>Ask Wikibe! <span class="pro-tag">Pro</span></a></li>
+                        <li><a href="#"><i class="bi bi-bookmark me-2"></i>Saved</a></li>
+                        <li><a href="#"><i class="bi bi-eye me-2"></i>Watch changes</a></li>
+                        <li><a href="#"><i class="bi bi-link me-2"></i>Short link</a></li>
+                        <li><a href="#"><i class="bi bi-quote me-2"></i>Cite this page</a></li>
+                        <li><a href="#"><i class="bi bi-qr-code me-2"></i>QR Code</a></li>
+                        <li><a href="#"><i class="bi bi-download me-2"></i>Download PDF</a></li>
+                        <li><a href="#"><i class="bi bi-printer me-2"></i>Printable Version</a></li>
+                        <li><a href="#"><i class="bi bi-info-circle me-2"></i>Page information</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+    </script>
+</body>
+</html>
