@@ -1,0 +1,445 @@
+
+/* Dark Mode Styles */
+:root {
+    --light-bg: #fcf8f5;
+    --light-text: #202122;
+    --light-link: #3366cc;
+    --dark-bg: #121212;
+    --dark-text: #e0e0e0;
+    --dark-link: #6699ff;
+    --card-light-bg: #fff;
+    --card-dark-bg: #1e1e1e;
+    --border-light: #ddd;
+    --border-dark: #444;
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Class that will be toggled */
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.dark-mode a {
+    color: var(--dark-link);
+}
+
+body.dark-mode header {
+    background-color: var(--dark-bg);
+}
+
+/* Make Wikipedia logo white in dark mode */
+/* body.dark-mode .logo-container img {
+    filter: brightness(0) invert(1);
+} */
+
+body.dark-mode .nav-links a {
+    color: #e0e0e0;
+}
+
+/* Make palette icon white in dark mode */
+body.dark-mode .palette-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* Keep the search box in original light mode colors */
+body.dark-mode .search-box {
+    background-color: #ffffff;
+    border-color: #ddd;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .search-icon-container {
+    color: #888;
+}
+
+body.dark-mode #search-input {
+    color: #5e4b45;
+    opacity: 0.5;
+    background-color: transparent;
+}
+
+body.dark-mode .search-btn {
+    background-color: #84855d;
+    color: #fdf9f6;
+}
+
+body.dark-mode .search-divider {
+    background: #84855d;
+    color: #84855d;
+}
+
+body.dark-mode .search-card,
+body.dark-mode .card {
+    background-color: var(--card-dark-bg);
+    border-color: var(--border-dark);
+}
+
+body.dark-mode .search-input {
+    color: var(--dark-text);
+}
+
+/* wiki-title and wiki-subtitle to #ffe5c4ff in dark mode (custom requirement) */
+body.dark-mode h1.wiki-title,
+body.dark-mode .wiki-title {
+    color: #ffe5c4ff;
+}
+
+body.dark-mode p.wiki-subtitle,
+body.dark-mode .wiki-subtitle {
+    color: #ffe5c4ff;
+}
+
+/* Popular Search heading to white in dark mode (custom requirement) */
+body.dark-mode .popular-search-section h2 {
+    color: #ffffff;
+}
+
+/* search cards to #ebebebff in dark mode */
+body.dark-mode .search-card {
+    background-color: #ebebebff;
+    border-color: #ddd;
+}
+
+/* search-container with original light mode colors */
+body.dark-mode .search-container {
+    background-color: transparent;
+    color: inherit;
+}
+
+/* text in search-card remains dark for readability */
+body.dark-mode .search-card h3,
+body.dark-mode .search-card p,
+body.dark-mode .search-card span {
+    color: #202122; /* text color for contrast on light cards */
+}
+
+/* login and donate text white in dark mode (custom requirement) */
+body.dark-mode .login-btn,
+body.dark-mode a[href="login.html"] {
+    color: white !important;
+}
+
+body.dark-mode .donate-link {
+    color: white !important;
+}
+
+/* Register button to #132f7dff in dark mode (custom requirement) */
+body.dark-mode .register-btn {
+    background-color: #132f7dff !important;
+    color: white !important;
+}
+
+/* Online-offline status dot to #00ff00ff in dark mode (custom requirement) */
+body.dark-mode .online-icon .bi-circle-fill {
+    color: #00ff00ff !important;
+}
+
+/* Login page specific dark mode styles */
+/* Make palette icon white in dark mode (custom requirement) */
+body.dark-mode .user-avatar {
+    filter: brightness(0) invert(1);
+}
+
+/* Login container text to white in dark mode (custom requirement) */
+body.dark-mode .login-container h1,
+body.dark-mode .login-container p,
+body.dark-mode .login-container .form-label,
+body.dark-mode .login-container .login-with p {
+    color: white !important;
+}
+
+/* Login container background and styling */
+body.dark-mode .login-container {
+    background-color: var(--card-dark-bg);
+    border-color: var(--border-dark);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Registration container background and styling */
+body.dark-mode .registration-container {
+    background-color: var(--card-dark-bg);
+    border-color: var(--border-dark);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Form inputs styling */
+body.dark-mode .login-container .form-control,
+body.dark-mode .registration-container input[type="text"],
+body.dark-mode .registration-container input[type="email"],
+body.dark-mode .registration-container input[type="password"] {
+    background-color: #2d2d2d;
+    border-color: var(--border-dark);
+    color: var(--dark-text);
+}
+
+body.dark-mode .login-container .form-control:focus,
+body.dark-mode .registration-container input:focus {
+    background-color: #2d2d2d;
+    color: var(--dark-text);
+    border-color: #5c5c5c;
+}
+
+/* Registration container text to white in dark mode */
+body.dark-mode .registration-container h1,
+body.dark-mode .registration-container label,
+body.dark-mode .registration-container .login-with p {
+    color: white !important;
+}
+
+/* Login link in registration to #69f0afff */
+body.dark-mode .login-link a {
+    color: #69f0afff !important;
+}
+
+/* Login link text color in registration */
+body.dark-mode .login-link {
+    color: white !important;
+}
+
+/* Sign in button from black to white with black text in dark mode (custom requirement) */
+body.dark-mode .sign-in-btn {
+    background-color: white !important;
+    color: black !important;
+}
+
+/* Sign up button from black to white with black text */
+body.dark-mode .signup-btn {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid var(--dark-bg);
+}
+
+/* Signup and forgot password links to #69f0afff in dark mode (custom requirement) */
+body.dark-mode .login-container p a,
+body.dark-mode .forgot-password a {
+    color: #69f0afff !important;
+}
+
+/* Login divider */
+body.dark-mode .login-divider {
+    background-color: #444;
+}
+
+/* Keep the Go Pro button color */
+body.dark-mode .go-pro-btn {
+    background-color: #fcde5a !important;
+    color: #000 !important;
+}
+
+/* Mode toggle button styles */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3366cc;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle i {
+    font-size: 24px;
+}
+
+body.dark-mode .theme-toggle {
+    background-color: #6699ff;
+}
+
+/* Additional dark mode styles for UI components */
+body.dark-mode .dropdown-menu {
+    background-color: var(--card-dark-bg);
+    border-color: var(--border-dark);
+}
+
+body.dark-mode .dropdown-item {
+    color: var(--dark-text);
+}
+
+body.dark-mode .dropdown-item:hover {
+    background-color: #333;
+}
+
+/* Register Page Dark Mode */
+body.dark-mode .auth-box {
+    background-color: var(--card-dark-bg);
+    border-color: var(--border-dark);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .form-control {
+    background-color: #2d2d2d;
+    border-color: var(--border-dark);
+    color: var(--dark-text);
+}
+
+body.dark-mode .form-control:focus {
+    background-color: #2d2d2d;
+    color: var(--dark-text);
+    border-color: #5c5c5c;
+}
+
+body.dark-mode .login-divider {
+    background-color: #444;
+}
+
+body.dark-mode .social-btn {
+    background-color: #2d2d2d;
+    border-color: var(--border-dark);
+    color: var(--dark-text);
+}
+
+/* Settings Page Dark Mode */
+body.dark-mode .settings-container {
+    background-color: var(--dark-bg);
+}
+
+body.dark-mode .contents-box, 
+body.dark-mode .main-content-area,
+body.dark-mode .settings-section {
+    background-color: var(--card-dark-bg);
+    border-color: var(--border-dark);
+}
+
+body.dark-mode .sidebar-menu a {
+    color: var(--dark-text);
+}
+
+body.dark-mode .sidebar-menu a:hover,
+body.dark-mode .sidebar-menu a.active {
+    background-color: #333;
+}
+
+body.dark-mode .setting-row {
+    border-color: #444;
+}
+
+/* Article Page Dark Mode */
+body.dark-mode .article-container {
+    background-color: var(--dark-bg);
+}
+
+body.dark-mode .article-content,
+body.dark-mode .sidebar,
+body.dark-mode .tools-sidebar,
+body.dark-mode .tools-menu,
+body.dark-mode .page-tools, 
+body.dark-mode .info-box {
+    background-color: var(--card-dark-bg);
+    border-color: var(--border-dark);
+}
+
+body.dark-mode table, 
+body.dark-mode th, 
+body.dark-mode td {
+    border-color: #444;
+}
+
+body.dark-mode .numbered-heading {
+    border-bottom-color: #444;
+}
+
+body.dark-mode .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #252525;
+}
+
+body.dark-mode pre, 
+body.dark-mode code {
+    background-color: #252525;
+    color: #d9d9d9;
+}
+
+/* Additional styles for csoc.html article page in dark mode */
+body.dark-mode .article-header {
+    border-bottom-color: var(--border-dark);
+}
+
+body.dark-mode .article-actions {
+    border-bottom-color: var(--border-dark);
+}
+
+body.dark-mode .article-header i {
+    color: var(--dark-text);
+}
+
+body.dark-mode #article-title {
+    color: var(--dark-text);
+}
+
+body.dark-mode .sidebar-heading,
+body.dark-mode .tools-heading {
+    color: var(--dark-text);
+    border-bottom-color: var(--border-dark);
+}
+
+body.dark-mode .action-link {
+    color: var(--dark-text);
+}
+
+body.dark-mode .sidebar-menu li a,
+body.dark-mode .tools-menu li a {
+    color: var(--dark-text);
+}
+
+body.dark-mode .expand-icon {
+    color: #777;
+}
+
+body.dark-mode .image-grid {
+    border-color: var(--border-dark);
+    background-color: var(--card-dark-bg);
+}
+
+body.dark-mode .image-grid img {
+    background-color: var(--card-dark-bg);
+}
+
+/* Make article body text white in dark mode for better readability */
+body.dark-mode .article-body p {
+    color: white;
+}
+
+body.dark-mode .article-body h5 {
+    color: white;
+}
+
+/* Keep hyperlinks in their standard color */
+body.dark-mode .article-body a {
+    color: var(--dark-link);
+}
+
+/* Portrait card styles for dark mode */
+body.dark-mode .portrait-card {
+    background-color: var(--card-dark-bg);
+    border-color: var(--border-dark);
+}
+
+body.dark-mode .portrait-title {
+    color: var(--dark-text);
+}
+
+body.dark-mode .portrait-details p {
+    color: var(--dark-text);
+}
+
+body.dark-mode .portrait-label,
+body.dark-mode .portrait-value {
+    color: var(--dark-text);
+    border-color: var(--border-dark);
+}

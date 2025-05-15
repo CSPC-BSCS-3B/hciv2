@@ -148,8 +148,6 @@ header {
     height: 34px;
     border-radius: 50%;
     object-fit: contain;
-    background: #fff;
-    border: 1px solid #e9e3df;
     display: block;
 }
 
