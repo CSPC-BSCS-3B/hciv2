@@ -32,7 +32,16 @@
         </div>
         <div class="nav-links">
             <button class="go-pro-btn" type="button">Go Pro</button>
-            <a href="#" class="user-icon gray-user-icon" title="User Profile"><i class="bi bi-person-fill"></i></a>
+            <a href="#" class="user-icon gray-user-icon dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false" title="User Profile"><i class="bi bi-person-fill"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                <li><button class="dropdown-item d-flex align-items-center" type="button"><i class="bi bi-chat-left-text me-2"></i>Talk</button></li>
+                <li><button class="dropdown-item d-flex align-items-center" type="button"><i class="bi bi-bar-chart-line me-2"></i>Contributions</button></li>
+                <li><button class="dropdown-item d-flex align-items-center" type="button"><i class="bi bi-pencil-square me-2"></i>Sandbox</button></li>
+                <li><button class="dropdown-item d-flex align-items-center" type="button"><i class="bi bi-bezier2 me-2"></i>Beta</button></li>
+                <li><button class="dropdown-item d-flex align-items-center" type="button"><i class="bi bi-gear me-2"></i>Settings</button></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><button class="dropdown-item d-flex align-items-center" type="button" id="logout-btn"><i class="bi bi-box-arrow-right me-2"></i>Logout</button></li>
+            </ul>
             <a href="#" class="user-icon" title="Palette"><i class="bi bi-palette-fill palette-icon"></i></a>
         </div>
     </header>
@@ -192,6 +201,38 @@
                     localStorage.setItem('theme', 'light');
                 }
             });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var logoutBtn = document.getElementById('logout-btn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Create alert if not already present
+                    if (!document.getElementById('logout-alert')) {
+                        var alertDiv = document.createElement('div');
+                        alertDiv.id = 'logout-alert';
+                        alertDiv.className = 'alert text-center';
+                        alertDiv.style.background = '#fee3c3';
+                        alertDiv.style.position = 'fixed';
+                        alertDiv.style.top = '30px';
+                        alertDiv.style.left = '50%';
+                        alertDiv.style.transform = 'translateX(-50%)';
+                        alertDiv.style.zIndex = '9999';
+                        alertDiv.style.fontWeight = '500';
+                        alertDiv.style.fontSize = '18px';
+                        alertDiv.style.border = '1px solid #e6b87a';
+                        alertDiv.style.borderRadius = '10px';
+                        alertDiv.style.padding = '16px 32px';
+                        alertDiv.style.boxShadow = '0 2px 8px rgba(0,0,0,0.08)';
+                        alertDiv.innerHTML = 'You are logout. But don’t worry, you can still access this page.😉';
+                        document.body.appendChild(alertDiv);
+                        setTimeout(function() {
+                            alertDiv.remove();
+                        }, 5000);
+                    }
+                });
+            }
         });
     </script>
 </body>
